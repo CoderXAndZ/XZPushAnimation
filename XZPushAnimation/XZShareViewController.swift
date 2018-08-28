@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XZShareViewController: ViewController {
+class XZShareViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XZCommodityAttributesController: ViewController {
+class XZCommodityAttributesController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
