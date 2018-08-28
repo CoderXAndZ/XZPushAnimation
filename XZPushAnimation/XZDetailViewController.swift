@@ -175,12 +175,12 @@ extension XZDetailViewController {
         let h = view.frame.height - bottomToolBar.frame.height
         
         evalution.view.frame = CGRect.init(x: xValue, y: yValue, width: w, height: h)
-        
+        // 设置View控件的宽度按照父视图的比例进行缩放，距离父视图顶部、左边距和右边距的距离不变
         evalution.view.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.RawValue(UInt8(UIViewAutoresizing.flexibleWidth.rawValue) | UInt8(UIViewAutoresizing.flexibleHeight.rawValue) | UInt8(UIViewAutoresizing.flexibleTopMargin.rawValue) |  UInt8(UIViewAutoresizing.flexibleLeftMargin.rawValue) | UInt8(UIViewAutoresizing.flexibleRightMargin.rawValue)))
         
         view.addSubview(evalution.view)
         addChildViewController(evalution)
-        
+        //  注意：重新设置view位置的代码，必须要写在添加视图的后面，不然autoresizing的位置计算会出错！
         hasRemoved = false
     }
     
