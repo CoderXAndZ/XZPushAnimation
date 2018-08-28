@@ -11,6 +11,7 @@
 		8437CCA2212EA2EC00DE9F5F /* XZCommodityAttributesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437CCA1212EA2EC00DE9F5F /* XZCommodityAttributesController.swift */; };
 		8442C29F212FB3CB00E16419 /* XZShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442C29E212FB3CB00E16419 /* XZShareViewController.swift */; };
 		8470D8132131687900D77A8B /* XZDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470D8122131687900D77A8B /* XZDetailViewController.swift */; };
+		847F58752135167000D6C338 /* XZDirectionalPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F58742135167000D6C338 /* XZDirectionalPanGestureRecognizer.swift */; };
 		84FBC05F212D5DAF00487EF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBC05E212D5DAF00487EF8 /* AppDelegate.swift */; };
 		84FBC064212D5DB000487EF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FBC062212D5DB000487EF8 /* Main.storyboard */; };
 		84FBC066212D5DB000487EF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FBC065212D5DB000487EF8 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		8437CCA1212EA2EC00DE9F5F /* XZCommodityAttributesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XZCommodityAttributesController.swift; sourceTree = "<group>"; };
 		8442C29E212FB3CB00E16419 /* XZShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZShareViewController.swift; sourceTree = "<group>"; };
 		8470D8122131687900D77A8B /* XZDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XZDetailViewController.swift; sourceTree = "<group>"; };
+		847F58742135167000D6C338 /* XZDirectionalPanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XZDirectionalPanGestureRecognizer.swift; sourceTree = "<group>"; };
 		84FBC05B212D5DAF00487EF8 /* XZPushAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XZPushAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FBC05E212D5DAF00487EF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FBC063212D5DB000487EF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,8 +88,9 @@
 				84FBC05E212D5DAF00487EF8 /* AppDelegate.swift */,
 				8442C29E212FB3CB00E16419 /* XZShareViewController.swift */,
 				8470D8122131687900D77A8B /* XZDetailViewController.swift */,
-				8437CCA1212EA2EC00DE9F5F /* XZCommodityAttributesController.swift */,
 				842CD75B2133FEFE00492A11 /* XZProductEvaluationController.swift */,
+				8437CCA1212EA2EC00DE9F5F /* XZCommodityAttributesController.swift */,
+				847F58742135167000D6C338 /* XZDirectionalPanGestureRecognizer.swift */,
 				84FBC062212D5DB000487EF8 /* Main.storyboard */,
 				84FBC065212D5DB000487EF8 /* Assets.xcassets */,
 				84FBC067212D5DB000487EF8 /* LaunchScreen.storyboard */,
@@ -210,6 +213,7 @@
 			files = (
 				84FBC05F212D5DAF00487EF8 /* AppDelegate.swift in Sources */,
 				8470D8132131687900D77A8B /* XZDetailViewController.swift in Sources */,
+				847F58752135167000D6C338 /* XZDirectionalPanGestureRecognizer.swift in Sources */,
 				8442C29F212FB3CB00E16419 /* XZShareViewController.swift in Sources */,
 				8437CCA2212EA2EC00DE9F5F /* XZCommodityAttributesController.swift in Sources */,
 				842CD75C2133FEFE00492A11 /* XZProductEvaluationController.swift in Sources */,

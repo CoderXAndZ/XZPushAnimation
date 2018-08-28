@@ -17,8 +17,6 @@ class XZDetailViewController: UIViewController {
     var hasRemoved = true
     
     var startPoint: CGPoint = CGPoint.zero
-//    var framePoint: CGPoint = CGPoint.zero
-    var originPoint: CGPoint = CGPoint.zero
     
     /// 子控制器视图初始frame
     lazy var originRect: CGRect? = {
@@ -75,30 +73,23 @@ class XZDetailViewController: UIViewController {
         }
         
         let currentPoint = sender.location(in: view)
+        
         switch sender.state {
         case .began:
-            startPoint = currentPoint // sender.location(in: view)
-//            framePoint = evalution.view.frame.origin
-            originPoint = sender.location(in: evalution.view)
-            
-            print("began ===== startPoint:",startPoint,"\n","\n","originPoint:",originPoint,"\n")
+            startPoint = currentPoint
         case .changed:
-//            let currentPoint = sender.location(in: view)
             let dx = currentPoint.x - startPoint.x
             
-            print("changed ==== currentPoint:",currentPoint,"\n","dx:",dx,"\n")
-            
             if dx > 0 {
-                evalution.view.frame = CGRect(x: (startPoint.x + dx - originPoint.x), y: 0, width: evalution.view.frame.size.width, height: evalution.view.frame.size.height)
-            } else  {
+                evalution.view.frame = CGRect(x: dx, y: 0, width: originRect.width, height: originRect.height)
+            } else {
                 originRect.origin.x = 0
                 evalution.view.frame = originRect
                 return
             }
         case .ended:
-//            let currentPoint = sender.location(in: view)
-            let dx = abs(currentPoint.x - startPoint.x)
-            print("ended ===== dx：",dx,"\n")
+            let dx = currentPoint.x - startPoint.x
+            
             if dx > 0 {
                 UIView.animate(withDuration: 0.25, animations: {
                     if (dx > 45) { // 超过45就移除子视图
@@ -114,6 +105,9 @@ class XZDetailViewController: UIViewController {
                 }, completion: { (_) in
                     
                 })
+            }else {
+                originRect.origin.x = 0
+                evalution.view.frame = originRect
             }
         default:
             break
@@ -178,6 +172,7 @@ extension XZDetailViewController : UITableViewDelegate,UITableViewDataSource {
 
 // MARK: - 添加子控制器以及子控制器视图
 extension XZDetailViewController {
+    
     // 将子视图添加到页面
     func setupEvalutionView() {
         guard let evalution = evalution,
@@ -190,8 +185,10 @@ extension XZDetailViewController {
         addChildViewController(evalution)
         
         hasRemoved = false
+        
         // 添加手势
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panAction))
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panAction(_:)))
         evalution.view.addGestureRecognizer(panGesture)
     }
+    
 }
